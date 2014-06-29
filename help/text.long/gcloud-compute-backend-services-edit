@@ -1,0 +1,30 @@
+NAME
+       gcloud-compute-backend-services-edit - Modify backend services
+
+SYNOPSIS
+       gcloud compute backend-services edit
+         NAME
+         [--format FORMAT; default="yaml"]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute backend-services edit can be used to modify a backend
+       service. The backend service resource is fetched from the server and
+       presented in a text editor. After the file is saved and closed, this
+       command will update the resource. Only fields that can be modified are
+       displayed in the editor.
+
+       The editor used to modify the resource is chosen by inspecting the
+       "EDITOR" environment variable.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the backend service to modify.
+
+FLAGS
+       --format FORMAT
+           The format to edit the resource in. Choices are "json" and "yaml".
+
+       --help
+           Print a summary help and exit.
+

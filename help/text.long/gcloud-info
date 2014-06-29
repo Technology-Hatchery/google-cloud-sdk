@@ -1,0 +1,16 @@
+NAME
+       gcloud-info - Prints out information about your current gcloud
+       environment.
+
+SYNOPSIS
+       gcloud info
+         [--show-log]
+         [-h, --help]
+
+FLAGS
+       --show-log
+           Print out the contents of the last log file.
+
+       --help
+           Print a summary help and exit.
+

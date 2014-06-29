@@ -1,0 +1,36 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-ADDRESSES\-RELEASE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-addresses-release \- Release reserved IP addresses
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute addresses release\fR
+  NAME [NAME \&...]
+  \-\-region REGION
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute addresses release\fR releases one or more Google Compute Engine IP addresses\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME [NAME \&...]\fR
+.RS 4
+The resources to delete\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the resources to delete\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

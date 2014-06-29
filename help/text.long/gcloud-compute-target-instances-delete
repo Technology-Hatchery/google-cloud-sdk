@@ -1,0 +1,26 @@
+NAME
+       gcloud-compute-target-instances-delete - Delete target instances
+
+SYNOPSIS
+       gcloud compute target-instances delete
+         NAME [NAME ...]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-instances delete deletes one or more Google
+       Compute Engine target instances. Target instances can be deleted only
+       if they are not being used by any other resources like forwarding
+       rules.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --zone ZONE
+           The zone of the resources to delete.
+
+       --help
+           Print a summary help and exit.
+

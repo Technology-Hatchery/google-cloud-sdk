@@ -1,0 +1,49 @@
+'\" t
+.TH "GCLOUD\-AUTH" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-auth \- Manage oauth2 credentials for the Google Cloud SDK\&.
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud auth\fR
+  COMMAND
+  [\-h, \-\-help]
+.fi
+.SH "FLAGS"
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following\&.
+.PP
+\fBactivate\-refresh\-token\fR
+.RS 4
+Get credentials via an existing refresh token\&.
+.RE
+.PP
+\fBactivate\-service\-account\fR
+.RS 4
+Get credentials via the private key for a service account\&.
+.RE
+.PP
+\fBlist\fR
+.RS 4
+List the accounts for known credentials\&.
+.RE
+.PP
+\fBlogin\fR
+.RS 4
+Get credentials for the tools in the Google Cloud SDK via a web flow\&.
+.RE
+.PP
+\fBrevoke\fR
+.RS 4
+Revoke authorization for credentials\&.
+.RE

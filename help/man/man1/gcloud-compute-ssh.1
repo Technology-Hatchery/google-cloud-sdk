@@ -1,0 +1,117 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-SSH" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-ssh \- SSH into a virtual machine instance
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute ssh\fR
+  [USER@]INSTANCE
+  [\-\-command COMMAND]
+  [\-\-container CONTAINER]
+  [\-\-ssh\-key\-file SSH_KEY_FILE]
+  [\-\-tty, \-t]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute ssh\fR is a thin wrapper around the \fIssh\fR command that takes care of authentication and the translation of the instance name into an IP address\&.
+.sp
+This command ensures that the user\(cqs public SSH key is present in the project\(cqs metadata\&. If the user does not have a public SSH key, one is generated using \fIssh\-keygen\fR\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fI[USER@]INSTANCE\fR
+.RS 4
+Specifies the instance to SSH into\&. If \(lqINSTANCE\(rq is the name of the instance, the \(lq\-\-zone\(rq flag must be specified\&. If \(lqINSTANCE\(rq is a suffix of the instance\(cqs URI that contains the zone (e\&.g\&., \(lqus\-central2\-a/instances/my\-instance\(rq), then \(lq\-\-zone\(rq can be omitted\&.
+.sp
+\(lqUSER\(rq specifies the username with which to SSH\&. If omitted, $USER from the environment is selected\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-command\fR \fICOMMAND\fR
+.RS 4
+A command to run on the virtual machine\&.
+.RE
+.PP
+\fB\-\-container\fR \fICONTAINER\fR
+.RS 4
+The name of a container inside of the virtual machine instance to connect to\&. This only applies to virtual machines that are using a Google container virtual machine image\&. For more information, see
+https://developers\&.google\&.com/compute/docs/containers\&.
+.RE
+.PP
+\fB\-\-ssh\-key\-file\fR \fISSH_KEY_FILE\fR
+.RS 4
+The path to the SSH key file\&. By deault, this is \(lq~/\&.ssh/google_compute_engine\(rq\&.
+.RE
+.PP
+\fB\-\-tty\fR
+.RS 4
+If provided, allocates a pseudo\-tty\&. This is useful if a command is provided which requires interaction from the user (e\&.g\&., \(lq\-\-command /bin/bash\(rq)\&. This is equivalent to \(lq\-t\(rq in
+\fBssh(1)\fR\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the instance\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To SSH into \(lqmy\-instance\(rq in zone \(lqus\-central2\-a\(rq, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute ssh my\-instance \-\-zone us\-central2\-a
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+You can omit the \(lq\-\-zone\(rq flag if the zone is provided in the positional argument:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute ssh us\-central2\-a/instances/my\-instance
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+You can also run a command on the virtual machine\&. For example, to get a snapshot of the guest\(cqs process tree, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute ssh my\-instance \-\-zone us\-central2\-a \-\-command "ps \-ejH"
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+If you are using the Google container virtual machine image, you can ssh into one of your containers with:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute ssh my\-instance \e
+    \-\-zone us\-central2\-a \e
+    \-\-container my\-container
+.fi
+.if n \{\
+.RE
+.\}

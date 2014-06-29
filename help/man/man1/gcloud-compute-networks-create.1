@@ -1,0 +1,43 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-NETWORKS\-CREATE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-networks-create \- Create a Google Compute Engine network
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute networks create\fR
+  NAME
+  [\-\-description DESCRIPTION]
+  [\-\-range RANGE; default="10\&.0\&.0\&.0/8"]
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute networks create\fR is used to create virtual networks\&. A network performs the same function that a router does in a home network: it describes the network range and gateway IP address, handles communication between instances, and serves as a gateway between instances and callers outside the network\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the network\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the network\&.
+.RE
+.PP
+\fB\-\-range\fR \fIRANGE\fR
+.RS 4
+Specifies the IPv4 address range of this network\&. The range must be specified in CIDR format:
+http://en\&.wikipedia\&.org/wiki/Classless_Inter\-Domain_Routing\&. If omitted, 10\&.0\&.0\&.0/8 is used\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

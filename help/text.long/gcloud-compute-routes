@@ -1,0 +1,27 @@
+NAME
+       gcloud-compute-routes - Read and manipulate routes
+
+SYNOPSIS
+       gcloud compute routes
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create a new route.
+
+       delete
+           Delete routes.
+
+       get
+           Get routes.
+
+       list
+           List routes.
+

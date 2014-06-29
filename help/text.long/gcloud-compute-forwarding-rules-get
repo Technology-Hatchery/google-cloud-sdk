@@ -1,0 +1,96 @@
+NAME
+       gcloud-compute-forwarding-rules-get - Display detailed information
+       about forwarding rules
+
+SYNOPSIS
+       gcloud compute forwarding-rules get
+         [NAME_REGEX ...]
+         [--fields FIELDS [FIELDS ...]]
+         [--format FORMAT; default="yaml"]
+         [--global]
+         [--limit LIMIT]
+         [--raw-links]
+         [--regions [REGION ...]]
+         [--sort-by SORT_BY]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute forwarding-rules get displays all data associated with
+       forwarding rules in a project.
+
+POSITIONAL ARGUMENTS
+       [NAME_REGEX ...]
+           Name regular expressions used to filter the resources fetched. The
+           regular expressions must conform to the re2 syntax (see
+           https://code.google.com/p/re2/wiki/Syntax).
+
+FLAGS
+       --fields FIELDS [FIELDS ...]
+           Fields to display. Possible values are:
+
+               IPAddress
+               IPProtocol
+               creationTimestamp
+               description
+               id
+               kind
+               name
+               portRange
+               region
+               selfLink
+               target
+
+       --format FORMAT
+           Specifies the display format. By default, resources are printed in
+           YAML format. The "text" and "yaml" formats print data as they are
+           fetched from the server, so these formats feel more responsive. The
+           "json" format delays printing until all data is collected into a
+           single list, so it may feel less responsive.
+
+       --global
+           If provided, global forwarding rules are shown.
+
+       --limit LIMIT
+           The maximum number of results.
+
+       --raw-links
+           If provided, resource references in output from the server will not
+           be condensed for readability. For example, when listing operations,
+           if a targetLink is
+           "https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central2-a/instances/my-instance",
+           "us-central2-a/instances/my-instance" is shown for brevity. This
+           behavior can be turned off using this flag.
+
+       --regions [REGION ...]
+           If provided, forwarding rules from the given regions are shown.
+
+       --sort-by SORT_BY
+           A field to sort by. To perform a descending-order sort, prefix the
+           value of this flag with a tilde ("~").
+
+       --help
+           Print a summary help and exit.
+
+EXAMPLES
+       To get all forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules get
+
+       To get detailed information about a forwarding named
+       "my-forwarding-rule", run:
+
+           $ gcloud compute forwarding-rules get my-forwarding-rule
+
+       To get all of the global forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules get --global
+
+       To get all of the regional forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules get --regions
+
+       To get all of the forwarding rules from the "us-central1" and the
+       "europe-west1" regions, run:
+
+           $ gcloud compute forwarding-rules get --regions us-central1 europe-west1
+

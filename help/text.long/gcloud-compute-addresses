@@ -1,0 +1,28 @@
+NAME
+       gcloud-compute-addresses - Read and manipulate Google Compute Engine
+       addresses
+
+SYNOPSIS
+       gcloud compute addresses
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       get
+           Get Google Compute Engine static addresses.
+
+       list
+           List Google Compute Engine addresses.
+
+       release
+           Release reserved IP addresses.
+
+       reserve
+           Reserve IP addresses.
+

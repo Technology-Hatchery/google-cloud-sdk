@@ -1,0 +1,55 @@
+'\" t
+.\"     Title: gcloud-auth-login
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 04/30/2014
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "GCLOUD\-AUTH\-LOGIN" "1" "04/30/2014" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+gcloud-auth-login \- Obtains access credentials for Google Cloud Platform resources, via a web flow, and makes them available for all the platform tools in the Cloud SDK\&. If a project is not provided, prompts for a default project\&.
+.SH "SYNOPSIS"
+.sp
+\fBgcloud auth login\fR [\-\-account ACCOUNT] [\-\-do\-not\-activate] [\-\-no\-launch\-browser] [\-h, \-\-help]
+.SH "FLAGS"
+.PP
+\fB\-\-account\fR \fIACCOUNT\fR
+.RS 4
+Override the account acquired from the web flow\&.
+.RE
+.PP
+\fB\-\-do\-not\-activate\fR
+.RS 4
+Do not set the new credentials as active\&.
+.RE
+.PP
+\fB\-\-no\-launch\-browser\fR
+.RS 4
+Print a URL to be copied instead of launching a web browser\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

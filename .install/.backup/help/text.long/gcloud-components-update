@@ -1,0 +1,15 @@
+NAME
+       gcloud-components-update - Download and install Cloud SDK components,
+       along with any other components they might depend on.
+
+SYNOPSIS
+       gcloud components update [COMPONENT-IDS ...] [-h, --help]
+
+POSITIONAL ARGUMENTS
+       [COMPONENT-IDS ...]
+           The component IDs to update or install.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

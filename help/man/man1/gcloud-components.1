@@ -1,0 +1,44 @@
+'\" t
+.TH "GCLOUD\-COMPONENTS" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-components \- Install, update, or remove the tools in the Google Cloud SDK\&.
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud components\fR
+  COMMAND
+  [\-h, \-\-help]
+.fi
+.SH "FLAGS"
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE
+.SH "COMMANDS"
+.sp
+\fICOMMAND\fR is one of the following\&.
+.PP
+\fBlist\fR
+.RS 4
+Command to list the current state of installed components\&.
+.RE
+.PP
+\fBremove\fR
+.RS 4
+Command to remove installed components\&.
+.RE
+.PP
+\fBrestore\fR
+.RS 4
+Command to restore a backup of a Cloud SDK installation\&.
+.RE
+.PP
+\fBupdate\fR
+.RS 4
+Command to update existing or install new components\&.
+.RE

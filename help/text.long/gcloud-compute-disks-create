@@ -1,0 +1,87 @@
+NAME
+       gcloud-compute-disks-create - Create Google Compute Engine persistent
+       disks
+
+SYNOPSIS
+       gcloud compute disks create
+         NAME [NAME ...]
+         [--description DESCRIPTION]
+         [--size SIZE]
+         [--source-image SOURCE_IMAGE | --source-snapshot SOURCE_SNAPSHOT]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute disks create creates one or more Google Compute Engine
+       persistent disks. When creating virtual machine instances, disks can be
+       attached to the instances through the gcloud compute instances create
+       command. Disks can also be attached to instances that are already
+       running using gloud compute instances attach-disk.
+
+       Disks are zonal resources, so they reside in a particular zone for
+       their entire lifetime. The contents of a disk can be moved to a
+       different zone by snapshotting the disk (using gcloud compute disks
+       snapshot) and creating a new disk using "--source-snapshot" in the
+       desired zone.
+
+       When creating disks, be sure to include the "--zone" option:
+
+           $ gcloud compute disks create my-disk-1 my-disk-2 --zone us-east1-a
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The names of the disks to create.
+
+FLAGS
+       --description DESCRIPTION
+           An optional, textual description for the disks being created.
+
+       --size SIZE
+           Indicates the size of the disks. The value must be a whole number
+           followed by a size unit of "KB" for kilobyte, "MB" for megabyte,
+           "GB" for gigabyte, or "TB" for terabyte. For example, "10GB" will
+           produce 10 gigabyte disks. If omitted, a default size of 200 GB is
+           used. The minimum size a disk can have is 1 GB. Disk size must be a
+           multiple of 1 GB.
+
+       --source-image SOURCE_IMAGE
+           A source image to apply to the disks being created.
+
+           The value for this option can be the name of an image in the
+           current project, a URI when referring to an image in another
+           project, or an alias from the table below.
+
+           Alias                Project        Image Name
+           centos-6             centos-cloud   centos-6-v20140415
+           debian-7             debian-cloud   debian-7-wheezy-v20140415
+           debian-7-backports   debian-cloud   backports-debian-7-wheezy-v20140415
+           rhel-6               rhel-cloud     rhel-6-v20140415
+           sles-11              suse-cloud     sles-11-sp3-v20140306
+
+           As new images are released, these aliases will be updated. If using
+           this tool in a script where depending on a specific version of an
+           image is necessary, then do not use the aliases. Instead, use the
+           URI of the desired image.
+
+           Aliases are expanded first, so avoid creating images in your
+           project whose names are in the set of aliases. If you do create an
+           image whose name matches an alias, you can refer to it by using its
+           URI.
+
+           This flag is mutually exclusive with "--source-snapshot".
+
+       --source-snapshot SOURCE_SNAPSHOT
+           A source snapshot used to create the disks. It is safe to delete a
+           snapshot after a disk has been created from the snapshot. In such
+           cases, the disks will no longer reference the deleted snapshot. To
+           get a list of snapshots in your current project, run gcloud compute
+           snapshots list. A snapshot from an existing disk can be created
+           using the gcloud compute disks snapshot command. This flag is
+           mutually exclusive with "--source-image".
+
+       --zone ZONE
+           The zone to create the disks in.
+
+       --help
+           Print a summary help and exit.
+

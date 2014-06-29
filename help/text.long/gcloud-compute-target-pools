@@ -1,0 +1,46 @@
+NAME
+       gcloud-compute-target-pools - Read and manipulate Google Compute Engine
+       target poolsto handle network load balancing
+
+SYNOPSIS
+       gcloud compute target-pools
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       add-health-checks
+           Add a health check to a target pool.
+
+       add-instances
+           Add instances to a target pool.
+
+       create
+           Create a target pool for network load balancing.
+
+       delete
+           Delete target pools.
+
+       get
+           Get target pools.
+
+       get-health
+           Get the health of instances in a target pool.
+
+       list
+           List target pools.
+
+       remove-health-checks
+           Remove a health check from a target pool.
+
+       remove-instances
+           Remove instances from a target pool.
+
+       set-backup
+           Set a backup pool for a target pool.
+

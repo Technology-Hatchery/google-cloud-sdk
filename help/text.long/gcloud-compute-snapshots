@@ -1,0 +1,25 @@
+NAME
+       gcloud-compute-snapshots - List, get, and delete Google Compute Engine
+       snapshots
+
+SYNOPSIS
+       gcloud compute snapshots
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       delete
+           Delete Google Compute Engine snapshots.
+
+       get
+           Get Google Compute Engine snapshots.
+
+       list
+           List Google Compute Engine snapshots.
+

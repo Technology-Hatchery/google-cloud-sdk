@@ -1,0 +1,41 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-FORWARDING\-RULES\-DELETE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-forwarding-rules-delete \- Delete forwarding rules
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute forwarding\-rules delete\fR
+  NAME [NAME \&...]
+  [\-\-global | \-\-region REGION]
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute forwarding\-rules delete\fR deletes one or more Google Compute Engine forwarding rules\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME [NAME \&...]\fR
+.RS 4
+The names of the forwarding rules to delete\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-global\fR
+.RS 4
+If provided, assume the forwarding rules are global\&. A forwarding rule is global if it references a target HTTP proxy\&.
+.RE
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the forwarding rule\&. This is required for regional forwarding rules\&. A forwarding rule is regional if it references a target pool or a target instance\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

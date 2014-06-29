@@ -1,0 +1,42 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-IMAGES\-CREATE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-images-create \- Create Google Compute Engine images
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute images create\fR
+  NAME
+  [\-\-description DESCRIPTION]
+  \-\-source\-uri SOURCE_URI
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute images create\fR is used to create custom disk images\&. The resulting image can be provided during instance or disk creation so that the instance attached to the resulting disks has access to a known set of software or files from the image\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the image to create\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the image being created\&.
+.RE
+.PP
+\fB\-\-source\-uri\fR \fISOURCE_URI\fR
+.RS 4
+The full Google Cloud Storage URL where the disk image is stored\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

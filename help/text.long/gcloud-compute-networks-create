@@ -1,0 +1,34 @@
+NAME
+       gcloud-compute-networks-create - Create a Google Compute Engine network
+
+SYNOPSIS
+       gcloud compute networks create
+         NAME
+         [--description DESCRIPTION]
+         [--range RANGE; default="10.0.0.0/8"]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute networks create is used to create virtual networks. A
+       network performs the same function that a router does in a home
+       network: it describes the network range and gateway IP address, handles
+       communication between instances, and serves as a gateway between
+       instances and callers outside the network.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the network.
+
+FLAGS
+       --description DESCRIPTION
+           An optional, textual description for the network.
+
+       --range RANGE
+           Specifies the IPv4 address range of this network. The range must be
+           specified in CIDR format:
+           http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing. If
+           omitted, 10.0.0.0/8 is used.
+
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,14 @@
+NAME
+       gcloud-components-list - List all available components and indicate
+       whether or not they're installed or have updates available.
+
+SYNOPSIS
+       gcloud components list [--show-versions] [-h, --help]
+
+FLAGS
+       --show-versions
+           Show version information for all components.
+
+       --help
+           Print a summary help and exit.
+

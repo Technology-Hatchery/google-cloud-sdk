@@ -1,0 +1,28 @@
+NAME
+       gcloud-compute-http-health-checks - Read and manipulate HTTP health
+       checks for load balanced instances
+
+SYNOPSIS
+       gcloud compute http-health-checks
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create an HTTP health check to monitor load balanced instances.
+
+       get
+           Display detailed information about HTTP health checks.
+
+       list
+           List HTTP health checks.
+
+       update
+           Update an HTTP health check.
+

@@ -1,0 +1,82 @@
+NAME
+       gcloud-compute-forwarding-rules-list - List forwarding rules
+
+SYNOPSIS
+       gcloud compute forwarding-rules list
+         [NAME_REGEX ...]
+         [--global]
+         [--limit LIMIT]
+         [--raw-links]
+         [--regions [REGION ...]]
+         [--sort-by SORT_BY]
+         [--uri]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute forwarding-rules list lists summary information of
+       forwarding rules in a project. The "--uri" option can be used to
+       display URIs instead. Users who want to see more data should use
+       "gcloud compute forwarding-rules get".
+
+       By default, global forwarding rules and forwarding rules from all
+       regions are listed. The results can be narrowed down by providing the
+       "--region" and/or "--global" flags.
+
+POSITIONAL ARGUMENTS
+       [NAME_REGEX ...]
+           Name regular expressions used to filter the resources fetched. The
+           regular expressions must conform to the re2 syntax (see
+           https://code.google.com/p/re2/wiki/Syntax).
+
+FLAGS
+       --global
+           If provided, global forwarding rules are shown.
+
+       --limit LIMIT
+           The maximum number of results.
+
+       --raw-links
+           If provided, resource references in output from the server will not
+           be condensed for readability. For example, when listing operations,
+           if a targetLink is
+           "https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central2-a/instances/my-instance",
+           "us-central2-a/instances/my-instance" is shown for brevity. This
+           behavior can be turned off using this flag.
+
+       --regions [REGION ...]
+           If provided, forwarding rules from the given regions are shown.
+
+       --sort-by SORT_BY
+           A field to sort by. To perform a descending-order sort, prefix the
+           value of this flag with a tilde ("~").
+
+       --uri
+           If provided, the list command will only print URIs for the
+           resources returned. If this flag is not provided, the list command
+           will print a human-readable table of useful resource data.
+
+       --help
+           Print a summary help and exit.
+
+EXAMPLES
+       To list all forwarding rules in a project in table form, run:
+
+           $ gcloud compute forwarding-rules list
+
+       To list the URIs of all forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules list --uri
+
+       To list all of the global forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules list --global
+
+       To list all of the regional forwarding rules in a project, run:
+
+           $ gcloud compute forwarding-rules list --regions
+
+       To list all of the forwarding rules from the "us-central1" and the
+       "europe-west1" regions, run:
+
+           $ gcloud compute forwarding-rules list --regions us-central1 europe-west1
+

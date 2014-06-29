@@ -1,0 +1,12 @@
+NAME
+       gcloud-components-restore - Restore the state of the Cloud SDK as it
+       was before the most recent components update, or removal. Can only
+       backtrack one step.
+
+SYNOPSIS
+       gcloud components restore [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,24 @@
+NAME
+       gcloud-compute-addresses-release - Release reserved IP addresses
+
+SYNOPSIS
+       gcloud compute addresses release
+         NAME [NAME ...]
+         --region REGION
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute addresses release releases one or more Google Compute
+       Engine IP addresses.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --region REGION
+           The region of the resources to delete.
+
+       --help
+           Print a summary help and exit.
+

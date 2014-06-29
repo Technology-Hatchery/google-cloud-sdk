@@ -1,0 +1,30 @@
+NAME
+       gcloud-compute-url-maps - List, create, and delete URL maps
+
+SYNOPSIS
+       gcloud compute url-maps
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create a URL map.
+
+       delete
+           Delete backend services.
+
+       edit
+           Modify URL maps.
+
+       get
+           Get URL maps.
+
+       list
+           List URL maps.
+

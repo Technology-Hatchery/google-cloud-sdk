@@ -1,0 +1,14 @@
+NAME
+       gcloud-auth-git-helper - ==SUPPRESS==
+
+SYNOPSIS
+       gcloud auth git-helper METHOD [-h, --help]
+
+POSITIONAL ARGUMENTS
+       METHOD
+           The git credential helper method.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

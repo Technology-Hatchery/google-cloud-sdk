@@ -1,0 +1,5 @@
+bin/
+bin/sdk/
+bin/sdk/ssh-keygen.exe
+bin/sdk/ssh.exe
+bin/sdk/scp.exe

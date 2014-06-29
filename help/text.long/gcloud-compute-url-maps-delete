@@ -1,0 +1,19 @@
+NAME
+       gcloud-compute-url-maps-delete - Delete URL maps
+
+SYNOPSIS
+       gcloud compute url-maps delete
+         NAME [NAME ...]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute url-maps delete deletes one or more URL maps.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

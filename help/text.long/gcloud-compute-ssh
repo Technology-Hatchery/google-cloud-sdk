@@ -1,0 +1,80 @@
+NAME
+       gcloud-compute-ssh - SSH into a virtual machine instance
+
+SYNOPSIS
+       gcloud compute ssh
+         [USER@]INSTANCE
+         [--command COMMAND]
+         [--container CONTAINER]
+         [--ssh-key-file SSH_KEY_FILE]
+         [--tty, -t]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute ssh is a thin wrapper around the ssh command that takes
+       care of authentication and the translation of the instance name into an
+       IP address.
+
+       This command ensures that the user's public SSH key is present in the
+       project's metadata. If the user does not have a public SSH key, one is
+       generated using ssh-keygen.
+
+POSITIONAL ARGUMENTS
+       [USER@]INSTANCE
+           Specifies the instance to SSH into. If "INSTANCE" is the name of
+           the instance, the "--zone" flag must be specified. If "INSTANCE" is
+           a suffix of the instance's URI that contains the zone (e.g.,
+           "us-central2-a/instances/my-instance"), then "--zone" can be
+           omitted.
+
+           "USER" specifies the username with which to SSH. If omitted, $USER
+           from the environment is selected.
+
+FLAGS
+       --command COMMAND
+           A command to run on the virtual machine.
+
+       --container CONTAINER
+           The name of a container inside of the virtual machine instance to
+           connect to. This only applies to virtual machines that are using a
+           Google container virtual machine image. For more information, see
+           https://developers.google.com/compute/docs/containers.
+
+       --ssh-key-file SSH_KEY_FILE
+           The path to the SSH key file. By deault, this is
+           "~/.ssh/google_compute_engine".
+
+       --tty
+           If provided, allocates a pseudo-tty. This is useful if a command is
+           provided which requires interaction from the user (e.g., "--command
+           /bin/bash"). This is equivalent to "-t" in ssh(1).
+
+       --zone ZONE
+           The zone of the instance.
+
+       --help
+           Print a summary help and exit.
+
+EXAMPLES
+       To SSH into "my-instance" in zone "us-central2-a", run:
+
+           $ gcloud compute ssh my-instance --zone us-central2-a
+
+       You can omit the "--zone" flag if the zone is provided in the
+       positional argument:
+
+           $ gcloud compute ssh us-central2-a/instances/my-instance
+
+       You can also run a command on the virtual machine. For example, to get
+       a snapshot of the guest's process tree, run:
+
+           $ gcloud compute ssh my-instance --zone us-central2-a --command "ps -ejH"
+
+       If you are using the Google container virtual machine image, you can
+       ssh into one of your containers with:
+
+           $ gcloud compute ssh my-instance \
+               --zone us-central2-a \
+               --container my-container
+

@@ -1,0 +1,29 @@
+NAME
+       gcloud-compute-target-instances - Read and manipulate Google Compute
+       Engine virtual target instances
+
+SYNOPSIS
+       gcloud compute target-instances
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create a target instance for handling traffic from a forwarding
+           rule.
+
+       delete
+           Delete target instances.
+
+       get
+           Get target instances.
+
+       list
+           List target instances.
+

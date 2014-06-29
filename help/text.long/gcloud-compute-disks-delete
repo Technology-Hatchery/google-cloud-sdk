@@ -1,0 +1,26 @@
+NAME
+       gcloud-compute-disks-delete - Delete Google Compute Engine persistent
+       disks
+
+SYNOPSIS
+       gcloud compute disks delete
+         NAME [NAME ...]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute disks delete deletes one or more Google Compute Engine
+       persistent disks. Disks can be deleted only if they are not being used
+       by any virtual machine instances.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --zone ZONE
+           The zone of the resources to delete.
+
+       --help
+           Print a summary help and exit.
+

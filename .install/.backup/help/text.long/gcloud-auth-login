@@ -1,0 +1,23 @@
+NAME
+       gcloud-auth-login - Obtains access credentials for Google Cloud
+       Platform resources, via a web flow, and makes them available for all
+       the platform tools in the Cloud SDK. If a project is not provided,
+       prompts for a default project.
+
+SYNOPSIS
+       gcloud auth login [--account ACCOUNT] [--do-not-activate]
+       [--no-launch-browser] [-h, --help]
+
+FLAGS
+       --account ACCOUNT
+           Override the account acquired from the web flow.
+
+       --do-not-activate
+           Do not set the new credentials as active.
+
+       --no-launch-browser
+           Print a URL to be copied instead of launching a web browser.
+
+       --help
+           Print a summary help and exit.
+

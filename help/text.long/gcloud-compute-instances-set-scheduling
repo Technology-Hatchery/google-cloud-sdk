@@ -1,0 +1,46 @@
+NAME
+       gcloud-compute-instances-set-scheduling - Set scheduling options for
+       Google Compute Engine virtual machines
+
+SYNOPSIS
+       gcloud compute instances set-scheduling
+         INSTANCE
+         [--maintenance-policy MAINTENANCE_POLICY]
+         [--no-restart-on-failure | --restart-on-failure]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       $gcloud compute instances set-scheduling is used to configure
+       scheduling options for Google Compute Engine virtual machines.
+
+POSITIONAL ARGUMENTS
+       INSTANCE
+           The name of the instance for which to change scheduling options.
+
+FLAGS
+       --maintenance-policy MAINTENANCE_POLICY
+           Specifies the behavior of the instances when their host machines
+           undergo maintenance. TERMINATE indicates that the instances should
+           be terminated. MIGRATE indicates that the instances should be
+           migrated to a new host. Choosing MIGRATE will temporarily impact
+           the performance of instances during a migration event.
+
+       --no-restart-on-failure
+           If provided, the instances will not be restarted automatically if
+           they are terminated by the system. Mutually exclusive with
+           --restart-on-failure. This does not affect terminations performed
+           by the user.
+
+       --restart-on-failure
+           If provided, the instances will be restarted automatically if they
+           are terminated by the system. This flag is mutually exclusive with
+           "--no-restart-on-failure". This does not affect terminations
+           performed by the user.
+
+       --zone ZONE
+           The zone of the instance.
+
+       --help
+           Print a summary help and exit.
+

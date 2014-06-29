@@ -1,0 +1,22 @@
+NAME
+       gcloud-auth-activate-refresh-token - Use an oauth2 refresh token to
+       manufacture credentials for Google APIs. This token must have been
+       acquired via some legitimate means to work. The account provided is
+       only used locally to help the Cloud SDK keep track of the new
+       credentials, so you can activate, list, and revoke the credentials in
+       the future.
+
+SYNOPSIS
+       gcloud auth activate-refresh-token ACCOUNT [TOKEN] [-h, --help]
+
+POSITIONAL ARGUMENTS
+       ACCOUNT
+           The account to associate with the refresh token.
+
+       [TOKEN]
+           OAuth2 refresh token. If blank, prompt for value.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

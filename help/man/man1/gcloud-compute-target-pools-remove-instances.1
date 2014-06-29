@@ -1,0 +1,48 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-TARGET\-POOLS\-REMOVE\-INSTANCES" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-target-pools-remove-instances \- Remove instances from a target pool
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute target\-pools remove\-instances\fR
+  NAME
+  \-\-instances INSTANCE [INSTANCE \&...]
+  \-\-region REGION
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute target\-pools remove\-instances\fR is used to remove one or more instances from a target pool\&. For more information on health checks and load balancing, see https://developers\&.google\&.com/compute/docs/load\-balancing/\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the target pool from which to remove the instances\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-instances\fR \fIINSTANCE [INSTANCE \&...]\fR
+.RS 4
+Specifies a list of instances to remove from the target pool\&.
+.RE
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the target pool\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the instances\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

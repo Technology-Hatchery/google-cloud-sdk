@@ -1,0 +1,96 @@
+NAME
+       gcloud-compute-operations-get - Get Google Compute Engine operations
+
+SYNOPSIS
+       gcloud compute operations get
+         [NAME_REGEX ...]
+         [--fields FIELDS [FIELDS ...]]
+         [--format FORMAT; default="yaml"]
+         [--global]
+         [--limit LIMIT]
+         [--raw-links]
+         [--regions [REGION ...]]
+         [--sort-by SORT_BY]
+         [--zones [ZONE ...]]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute operations get displays all data associated with Google
+       Compute Engine operations in a project.
+
+       By default, global operations and operations from all regions and zones
+       are fetched. The results can be narrowed down by providing "--global",
+       "--regions" and/or "--zones".
+
+POSITIONAL ARGUMENTS
+       [NAME_REGEX ...]
+           Name regular expressions used to filter the resources fetched. The
+           regular expressions must conform to the re2 syntax (see
+           https://code.google.com/p/re2/wiki/Syntax).
+
+FLAGS
+       --fields FIELDS [FIELDS ...]
+           Fields to display. Possible values are:
+
+               clientOperationId
+               creationTimestamp
+               endTime
+               error.errors[].code
+               error.errors[].location
+               error.errors[].message
+               httpErrorMessage
+               httpErrorStatusCode
+               id
+               insertTime
+               kind
+               name
+               operationType
+               progress
+               region
+               selfLink
+               startTime
+               status
+               statusMessage
+               targetId
+               targetLink
+               user
+               warnings[].code
+               warnings[].data[].key
+               warnings[].data[].value
+               warnings[].message
+               zone
+
+       --format FORMAT
+           Specifies the display format. By default, resources are printed in
+           YAML format. The "text" and "yaml" formats print data as they are
+           fetched from the server, so these formats feel more responsive. The
+           "json" format delays printing until all data is collected into a
+           single list, so it may feel less responsive.
+
+       --global
+           If provided, operations from the global scope are queried.
+
+       --limit LIMIT
+           The maximum number of results.
+
+       --raw-links
+           If provided, resource references in output from the server will not
+           be condensed for readability. For example, when listing operations,
+           if a targetLink is
+           "https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central2-a/instances/my-instance",
+           "us-central2-a/instances/my-instance" is shown for brevity. This
+           behavior can be turned off using this flag.
+
+       --regions [REGION ...]
+           If provided, operations from the given regions are queried.
+
+       --sort-by SORT_BY
+           A field to sort by. To perform a descending-order sort, prefix the
+           value of this flag with a tilde ("~").
+
+       --zones [ZONE ...]
+           If provided, operations from the given zones are queried.
+
+       --help
+           Print a summary help and exit.
+

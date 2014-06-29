@@ -1,0 +1,33 @@
+'\" t
+.TH "GCLOUD\-AUTH\-ACTIVATE\-REFRESH\-TOKEN" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-auth-activate-refresh-token \- Use an oauth2 refresh token to manufacture credentials for Google APIs\&. This token must have been acquired via some legitimate means to work\&. The account provided is only used locally to help the Cloud SDK keep track of the new credentials, so you can activate, list, and revoke the credentials in the future\&.
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud auth activate\-refresh\-token\fR
+  ACCOUNT
+  [TOKEN]
+  [\-h, \-\-help]
+.fi
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fIACCOUNT\fR
+.RS 4
+The account to associate with the refresh token\&.
+.RE
+.PP
+\fI[TOKEN]\fR
+.RS 4
+OAuth2 refresh token\&. If blank, prompt for value\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

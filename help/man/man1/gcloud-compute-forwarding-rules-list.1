@@ -1,0 +1,130 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-FORWARDING\-RULES\-LIST" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-forwarding-rules-list \- List forwarding rules
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute forwarding\-rules list\fR
+  [NAME_REGEX \&...]
+  [\-\-global]
+  [\-\-limit LIMIT]
+  [\-\-raw\-links]
+  [\-\-regions [REGION \&...]]
+  [\-\-sort\-by SORT_BY]
+  [\-\-uri]
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute forwarding\-rules list\fR lists summary information of forwarding rules in a project\&. The \(lq\-\-uri\(rq option can be used to display URIs instead\&. Users who want to see more data should use \(lqgcloud compute forwarding\-rules get\(rq\&.
+.sp
+By default, global forwarding rules and forwarding rules from all regions are listed\&. The results can be narrowed down by providing the \(lq\-\-region\(rq and/or \(lq\-\-global\(rq flags\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fI[NAME_REGEX \&...]\fR
+.RS 4
+Name regular expressions used to filter the resources fetched\&. The regular expressions must conform to the re2 syntax (see
+https://code\&.google\&.com/p/re2/wiki/Syntax)\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-global\fR
+.RS 4
+If provided, global forwarding rules are shown\&.
+.RE
+.PP
+\fB\-\-limit\fR \fILIMIT\fR
+.RS 4
+The maximum number of results\&.
+.RE
+.PP
+\fB\-\-raw\-links\fR
+.RS 4
+If provided, resource references in output from the server will not be condensed for readability\&. For example, when listing operations, if a targetLink is \(lqhttps://www\&.googleapis\&.com/compute/v1/projects/my\-project/zones/us\-central2\-a/instances/my\-instance\(rq, \(lqus\-central2\-a/instances/my\-instance\(rq is shown for brevity\&. This behavior can be turned off using this flag\&.
+.RE
+.PP
+\fB\-\-regions\fR \fI[REGION \&...]\fR
+.RS 4
+If provided, forwarding rules from the given regions are shown\&.
+.RE
+.PP
+\fB\-\-sort\-by\fR \fISORT_BY\fR
+.RS 4
+A field to sort by\&. To perform a descending\-order sort, prefix the value of this flag with a tilde (\(lq~\(rq)\&.
+.RE
+.PP
+\fB\-\-uri\fR
+.RS 4
+If provided, the list command will only print URIs for the resources returned\&. If this flag is not provided, the list command will print a human\-readable table of useful resource data\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE
+.SH "EXAMPLES"
+.sp
+To list all forwarding rules in a project in table form, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute forwarding\-rules list
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To list the URIs of all forwarding rules in a project, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute forwarding\-rules list \-\-uri
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To list all of the global forwarding rules in a project, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute forwarding\-rules list \-\-global
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To list all of the regional forwarding rules in a project, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute forwarding\-rules list \-\-regions
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+To list all of the forwarding rules from the \(lqus\-central1\(rq and the \(lqeurope\-west1\(rq regions, run:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute forwarding\-rules list \-\-regions us\-central1 europe\-west1
+.fi
+.if n \{\
+.RE
+.\}

@@ -1,0 +1,51 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-PROJECT\-INFO\-ADD\-METADATA" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-project-info-add-metadata \- Add or update project\-wide metadata
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute project\-info add\-metadata\fR
+  [\-\-metadata KEY=VALUE [KEY=VALUE \&...]]
+  [\-\-metadata\-from\-file KEY=LOCAL_FILE_PATH [KEY=LOCAL_FILE_PATH \&...]]
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute project\-info add\-metadata\fR can be used to add or update project\-wide metadata\&. Every instance has access to a metadata server that can be used to query metadata that has been set through this tool\&. Project\-wide metadata entries are visible to all instances\&. To set metadata for individual instances, use \fIgcloud compute instances add\-metadata\fR\&. For information on metadata, see https://developers\&.google\&.com/compute/docs/metadata\&.
+.sp
+Only metadata keys that are provided are mutated\&. Existing metadata entries will remain unaffected\&.
+.SH "FLAGS"
+.PP
+\fB\-\-metadata\fR \fIKEY=VALUE [KEY=VALUE \&...]\fR
+.RS 4
+Metadata to be made available to the guest operating system running on the instances\&. Each metadata entry is a key/value pair separated by an equals sign\&. Metadata keys must be unique and less than 128 bytes in length\&. Values must be less than or equal to 32,768 bytes in length\&. To provide multiple metadata entries, repeat this flag\&.
+.sp
+In images that have
+Compute Engine tools installed
+on them, the following metadata keys have special meanings:
+.PP
+\fBstartup\-script\fR
+.RS 4
+Specifies a script that will be executed by the instances once they start running\&. For convenience, \(lq\-\-metadata\-from\-file\(rq can be used to pull the value from a file\&.
+.RE
+.PP
+\fBstartup\-script\-url\fR
+.RS 4
+Same as \(lqstartup\-script\(rq except that the script contents are pulled from a publicly\-accessible location on the web\&.
+.RE
+.RE
+.PP
+\fB\-\-metadata\-from\-file\fR \fIKEY=LOCAL_FILE_PATH [KEY=LOCAL_FILE_PATH \&...]\fR
+.RS 4
+Same as \(lq\-\-metadata\(rq except that the value for the entry will be read from a local file\&. This is useful for values that are too large such as \(lqstartup\-script\(rq contents\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

@@ -1,0 +1,28 @@
+NAME
+       gcloud-compute-networks - List, create, and delete Google Compute
+       Engine networks
+
+SYNOPSIS
+       gcloud compute networks
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create Google Compute Engine networks.
+
+       delete
+           Delete Google Compute Engine networks.
+
+       get
+           Get Google Compute Engine networks.
+
+       list
+           List Google Compute Engine networks.
+

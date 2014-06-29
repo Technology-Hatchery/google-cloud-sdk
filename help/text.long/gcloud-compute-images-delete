@@ -1,0 +1,20 @@
+NAME
+       gcloud-compute-images-delete - Delete Google Compute Engine images
+
+SYNOPSIS
+       gcloud compute images delete
+         NAME [NAME ...]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute images delete deletes one or more Google Compute Engine
+       images.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

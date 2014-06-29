@@ -1,0 +1,43 @@
+NAME
+       gcloud-compute-instances-remove-tags - Remove tags from Google Compute
+       Engine virtual machine instances
+
+SYNOPSIS
+       gcloud compute instances remove-tags
+         NAME
+         [--all | --tags TAG [TAG ...]]
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute instances remove-tags is used to remove tags to Google
+       Compute Engine virtual machine instances. For example:
+
+           $ gcloud compute instances remove-tags my-instance --tags tag-1 tag-2
+
+       will remove tags "tag-1" and "tag-2" from the existing tags of
+       "my-instance".
+
+       Tags can be used to identify instances when adding network firewall
+       rules. Tags can also be used to get firewall rules that already exist
+       to be applied to the instance. See gcloud-compute-firewalls-create(1)
+       for more details.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the instance whose tags should be modified.
+
+FLAGS
+       --all
+           Remove all tags from the instance.
+
+       --tags TAG [TAG ...]
+           Specifies strings to be removed from the instance tags. Multiple
+           tags can be removed by repeating this flag.
+
+       --zone ZONE
+           The zone of the instance.
+
+       --help
+           Print a summary help and exit.
+

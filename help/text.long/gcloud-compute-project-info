@@ -1,0 +1,25 @@
+NAME
+       gcloud-compute-project-info - Read and manipulate project-level data
+       like quotas and metadata
+
+SYNOPSIS
+       gcloud compute project-info
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       add-metadata
+           Add or update project-wide metadata.
+
+       get
+           Get the Google Compute Engine project resource.
+
+       remove-metadata
+           Remove project-wide metadata entries.
+

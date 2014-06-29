@@ -1,0 +1,56 @@
+'\" t
+.\"     Title: gcloud-config-list
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 04/30/2014
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "GCLOUD\-CONFIG\-LIST" "1" "04/30/2014" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+gcloud-config-list \- List all currently available Cloud SDK properties associated with your current workspace or global configuration\&.
+.SH "SYNOPSIS"
+.sp
+\fBgcloud config list\fR [PROPERTY] [\-\-all] [\-\-section SECTION, \-s SECTION] [\-h, \-\-help]
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fI[PROPERTY]\fR
+.RS 4
+The property to be listed\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-all\fR
+.RS 4
+List all set and unset properties that match the arguments\&.
+.RE
+.PP
+\fB\-\-section\fR \fISECTION\fR
+.RS 4
+The section whose properties shall be listed\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

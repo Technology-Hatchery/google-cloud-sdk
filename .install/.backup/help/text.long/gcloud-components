@@ -1,0 +1,26 @@
+NAME
+       gcloud-components - Install, update, or remove the tools in the Google
+       Cloud SDK.
+
+SYNOPSIS
+       gcloud components COMMAND [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       list
+           Command to list the current state of installed components.
+
+       remove
+           Command to remove installed components.
+
+       restore
+           Command to restore a backup of a Cloud SDK installation.
+
+       update
+           Command to update existing or install new components.
+

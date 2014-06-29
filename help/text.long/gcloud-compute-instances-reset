@@ -1,0 +1,24 @@
+NAME
+       gcloud-compute-instances-reset - Reset a virtual machine instance
+
+SYNOPSIS
+       gcloud compute instances reset
+         NAME
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute instances reset is used to perform a hard reset on a
+       Google Compute Engine virtual machine.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the instance to reset.
+
+FLAGS
+       --zone ZONE
+           Specifies the zone of the instance.
+
+       --help
+           Print a summary help and exit.
+

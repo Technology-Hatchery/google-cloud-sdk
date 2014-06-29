@@ -1,0 +1,70 @@
+NAME
+       gcloud-compute-backend-services-get-health - Get backend health
+       statuses from a backend service
+
+SYNOPSIS
+       gcloud compute backend-services get-health
+         NAME
+         [--fields FIELDS [FIELDS ...]]
+         [--format FORMAT; default="yaml"]
+         [--limit LIMIT]
+         [--raw-links]
+         [--sort-by SORT_BY]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute backend-services get-health is used to request the
+       current health status of instances in a backend service. Every group in
+       the service is checked and the health status of each configured
+       instance is printed.
+
+       If a group contains names of instance that don't exist or instances
+       that haven't yet been pushed to the load-balancing system, they will
+       not show up. Those that are listed as "HEALTHY" are able to receive
+       load-balanced traffic. Those that are marked as "UNHEALTHY" are either
+       failing the configured health-check or not responding to it.
+
+       Since the health checks are performed continuously and in a distributed
+       manner, the state returned by this command is the most recent result of
+       a vote of several redundant health checks. Backend services that do not
+       have a valid global forwarding rule referencing it will not be health
+       checked and so will have no health status.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the backend service.
+
+FLAGS
+       --fields FIELDS [FIELDS ...]
+           Fields to display. Possible values are:
+
+               healthStatus[].healthState
+               healthStatus[].instance
+               healthStatus[].ipAddress
+               kind
+
+       --format FORMAT
+           Specifies the display format. By default, resources are printed in
+           YAML format. The "text" and "yaml" formats print data as they are
+           fetched from the server, so these formats feel more responsive. The
+           "json" format delays printing until all data is collected into a
+           single list, so it may feel less responsive.
+
+       --limit LIMIT
+           The maximum number of results.
+
+       --raw-links
+           If provided, resource references in output from the server will not
+           be condensed for readability. For example, when listing operations,
+           if a targetLink is
+           "https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central2-a/instances/my-instance",
+           "us-central2-a/instances/my-instance" is shown for brevity. This
+           behavior can be turned off using this flag.
+
+       --sort-by SORT_BY
+           A field to sort by. To perform a descending-order sort, prefix the
+           value of this flag with a tilde ("~").
+
+       --help
+           Print a summary help and exit.
+

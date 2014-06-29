@@ -1,0 +1,18 @@
+NAME
+       gcloud-auth-revoke - Revoke credentials. If no account is provided, the
+       currently active account is used.
+
+SYNOPSIS
+       gcloud auth revoke [ACCOUNTS ...] [--all] [-h, --help]
+
+POSITIONAL ARGUMENTS
+       [ACCOUNTS ...]
+           Accounts whose credentials shall be revoked.
+
+FLAGS
+       --all
+           Revoke all known credentials.
+
+       --help
+           Print a summary help and exit.
+

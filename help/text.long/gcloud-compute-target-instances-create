@@ -1,0 +1,37 @@
+NAME
+       gcloud-compute-target-instances-create - Create a target instance for
+       handling traffic from a forwarding rule
+
+SYNOPSIS
+       gcloud compute target-instances create
+         NAME
+         [--description DESCRIPTION]
+         --instance INSTANCE
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-instances create is used to create a target
+       instance for handling traffic from one or more forwarding rules. Target
+       instances are ideal for traffic that should be managed by a single
+       source. For more information on target instances, see
+       https://developers.google.com/compute/docs/protocol-forwarding/#targetinstances.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the target instance.
+
+FLAGS
+       --description DESCRIPTION
+           An optional, textual description of the target instance.
+
+       --instance INSTANCE
+           The name of the virtual machine instance that will handle the
+           traffic.
+
+       --zone ZONE
+           The zone of the target instance (i.e., where the instance resides).
+
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,48 @@
+NAME
+       gcloud-compute-backend-services-create - Create a backend service
+
+SYNOPSIS
+       gcloud compute backend-services create
+         NAME
+         [--description DESCRIPTION]
+         --http-health-check HTTP_HEALTH_CHECK
+         [--port PORT; default="80"]
+         [--timeout TIMEOUT; default="30s"]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute backend-services create is used to create backend
+       services. Backend services define groups of backends that can receive
+       traffic. Each backend group has parameters that define the group's
+       capacity (e.g., max CPU utilization, max queries per second, ...). URL
+       maps define which requests are sent to which backend services.
+
+       Backend services created through this command will start out without
+       any backend groups. To add backend groups, use gcloud compute
+       backend-services add-backend or gcloud compute backend-services edit.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the backend service.
+
+FLAGS
+       --description DESCRIPTION
+           An optional, textual description for the backend service.
+
+       --http-health-check HTTP_HEALTH_CHECK
+           An HTTP health check object for checking the health of the backend
+           service.
+
+       --port PORT
+           The TCP port to use when connected to the backend.
+
+       --timeout TIMEOUT
+           The amount of time to wait for a backend to respond to a request
+           before considering the request failed. For example, specifying
+           "10s" will give backends 10 seconds to respond to requests. Valid
+           units for this flag are "s" for seconds, "m" for minutes, and "h"
+           for hours.
+
+       --help
+           Print a summary help and exit.
+

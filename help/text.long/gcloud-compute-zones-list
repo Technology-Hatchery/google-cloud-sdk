@@ -1,0 +1,42 @@
+NAME
+       gcloud-compute-zones-list - List Google Compute Engine zones.
+
+SYNOPSIS
+       gcloud compute zones list
+         [NAME_REGEX ...]
+         [--limit LIMIT]
+         [--raw-links]
+         [--sort-by SORT_BY]
+         [--uri]
+         [-h, --help]
+
+POSITIONAL ARGUMENTS
+       [NAME_REGEX ...]
+           Name regular expressions used to filter the resources fetched. The
+           regular expressions must conform to the re2 syntax (see
+           https://code.google.com/p/re2/wiki/Syntax).
+
+FLAGS
+       --limit LIMIT
+           The maximum number of results.
+
+       --raw-links
+           If provided, resource references in output from the server will not
+           be condensed for readability. For example, when listing operations,
+           if a targetLink is
+           "https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central2-a/instances/my-instance",
+           "us-central2-a/instances/my-instance" is shown for brevity. This
+           behavior can be turned off using this flag.
+
+       --sort-by SORT_BY
+           A field to sort by. To perform a descending-order sort, prefix the
+           value of this flag with a tilde ("~").
+
+       --uri
+           If provided, the list command will only print URIs for the
+           resources returned. If this flag is not provided, the list command
+           will print a human-readable table of useful resource data.
+
+       --help
+           Print a summary help and exit.
+

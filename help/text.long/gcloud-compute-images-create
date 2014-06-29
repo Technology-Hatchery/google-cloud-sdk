@@ -1,0 +1,30 @@
+NAME
+       gcloud-compute-images-create - Create Google Compute Engine images
+
+SYNOPSIS
+       gcloud compute images create
+         NAME
+         [--description DESCRIPTION]
+         --source-uri SOURCE_URI
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute images create is used to create custom disk images. The
+       resulting image can be provided during instance or disk creation so
+       that the instance attached to the resulting disks has access to a known
+       set of software or files from the image.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the image to create.
+
+FLAGS
+       --description DESCRIPTION
+           An optional, textual description for the image being created.
+
+       --source-uri SOURCE_URI
+           The full Google Cloud Storage URL where the disk image is stored.
+
+       --help
+           Print a summary help and exit.
+

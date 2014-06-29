@@ -1,0 +1,36 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-INSTANCES\-GET\-SERIAL\-PORT\-OUTPUT" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-instances-get-serial-port-output \- Read output from a virtual machine instance\*(Aqs serial port
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute instances get\-serial\-port\-output\fR
+  NAME
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+gcloud compute instances get\-serial\-port\-output is used to get the output from a Google Compute Engine virtual machine\(cqs serial port\&. The serial port output from the virtual machine will be printed to standard out\&. This information can be useful for diagnostic purposes\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the instance\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+Specifies the zone of the instance\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

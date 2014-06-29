@@ -1,0 +1,42 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-TARGET\-POOLS\-REMOVE\-HEALTH\-CHECKS" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-target-pools-remove-health-checks \- Remove an HTTP health check from a target pool
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute target\-pools remove\-health\-checks\fR
+  NAME
+  \-\-http\-health\-check HEALTH_CHECK
+  \-\-region REGION
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute target\-pools remove\-health\-checks\fR is used to remove an HTTP health check from a target pool\&. Health checks are used to determine the health status of instances in the target pool\&. For more information on health checks and load balancing, see https://developers\&.google\&.com/compute/docs/load\-balancing/\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the target pool from which to remove the health check\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-http\-health\-check\fR \fIHEALTH_CHECK\fR
+.RS 4
+Specifies an HTTP health check object to remove from the target pool\&.
+.RE
+.PP
+\fB\-\-region\fR \fIREGION\fR
+.RS 4
+The region of the target pool\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

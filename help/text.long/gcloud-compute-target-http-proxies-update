@@ -1,0 +1,30 @@
+NAME
+       gcloud-compute-target-http-proxies-update - Update a target HTTP proxy
+
+SYNOPSIS
+       gcloud compute target-http-proxies update
+         NAME
+         --url-map URL_MAP
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-http-proxies update is used to change the URL map
+       of existing target HTTP proxies. A target HTTP proxy is referenced by
+       one or more forwarding rules which define which packets the proxy is
+       responsible for routing. The target HTTP proxy in turn points to a URL
+       map that defines the rules for routing the requests. The URL map's job
+       is to map URLs to backend services which handle the actual requests.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the target HTTP proxy.
+
+FLAGS
+       --url-map URL_MAP
+           A reference to a URL map resource that will define the mapping of
+           URLs to backend services. The URL map must exist and cannot be
+           deleted while referenced by a target HTTP proxy.
+
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,35 @@
+NAME
+       gcloud-compute-target-pools-add-instances - Add instances to a target
+       pool
+
+SYNOPSIS
+       gcloud compute target-pools add-instances
+         NAME
+         --instances INSTANCE [INSTANCE ...]
+         --region REGION
+         --zone ZONE
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-pools add-instances is used to add one or more
+       instances to a target pool. For more information on health checks and
+       load balancing, see
+       https://developers.google.com/compute/docs/load-balancing/.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the target pool to which to add the instances.
+
+FLAGS
+       --instances INSTANCE [INSTANCE ...]
+           Specifies a list of instances to add to the target pool.
+
+       --region REGION
+           The region of the target pool.
+
+       --zone ZONE
+           The zone of the instances.
+
+       --help
+           Print a summary help and exit.
+

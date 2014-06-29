@@ -1,0 +1,54 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-INSTANCES\-ADD\-ACCESS\-CONFIG" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-instances-add-access-config \- Create an access configuration for the network interface of a Google Compute Engine virtual machine
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute instances add\-access\-config\fR
+  NAME
+  [\-\-access\-config\-name ACCESS_CONFIG_NAME; default="external\-nat"]
+  [\-\-address ADDRESS]
+  [\-\-network\-interface NETWORK_INTERFACE; default="nic0"]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute instances add\-access\-config\fR is used to create access configurations for network interfaces of Google Compute Engine virtual machines\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the instance to add the access configuration to\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-access\-config\-name\fR \fIACCESS_CONFIG_NAME\fR
+.RS 4
+Specifies the name of the new access configuration\&. \(lqexternal\-nat\(rq is used as the default if this flag is not provided\&.
+.RE
+.PP
+\fB\-\-address\fR \fIADDRESS\fR
+.RS 4
+Specifies the external IP address of the new access configuration\&. If this is not specified, then the service will choose an available ephemeral IP address\&. If an explicit IP address is given, then that IP address must be reserved by the project and not be in use by another resource\&.
+.RE
+.PP
+\fB\-\-network\-interface\fR \fINETWORK_INTERFACE\fR
+.RS 4
+Specifies the name of the network interface on which to add the new access configuration\&. If this is not provided, then "nic0" is used as the default\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the instance\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

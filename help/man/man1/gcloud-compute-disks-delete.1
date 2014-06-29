@@ -1,0 +1,36 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-DISKS\-DELETE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-disks-delete \- Delete Google Compute Engine persistent disks
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute disks delete\fR
+  NAME [NAME \&...]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute disks delete\fR deletes one or more Google Compute Engine persistent disks\&. Disks can be deleted only if they are not being used by any virtual machine instances\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME [NAME \&...]\fR
+.RS 4
+The resources to delete\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the resources to delete\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

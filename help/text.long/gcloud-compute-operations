@@ -1,0 +1,22 @@
+NAME
+       gcloud-compute-operations - Read and manipulate Google Compute Engine
+       operations
+
+SYNOPSIS
+       gcloud compute operations
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       get
+           Get Google Compute Engine operations.
+
+       list
+           List Google Compute Engine operations.
+

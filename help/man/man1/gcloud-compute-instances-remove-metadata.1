@@ -1,0 +1,47 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-INSTANCES\-REMOVE\-METADATA" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-instances-remove-metadata \- Remove instance metadata
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute instances remove\-metadata\fR
+  NAME
+  [\-\-all | \-\-keys KEY [KEY \&...]]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+gcloud compute instances remove\-metadata can be used to remove instance metadata entries\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME\fR
+.RS 4
+The name of the instance whose metadata should be modified\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-all\fR
+.RS 4
+If provided, all metadata entries are removed\&.
+.RE
+.PP
+\fB\-\-keys\fR \fIKEY [KEY \&...]\fR
+.RS 4
+The keys of the entries to remove\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the instance\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

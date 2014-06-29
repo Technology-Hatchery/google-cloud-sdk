@@ -1,0 +1,28 @@
+NAME
+       gcloud-auth - Manage oauth2 credentials for the Google Cloud SDK.
+
+SYNOPSIS
+       gcloud auth COMMAND [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       activate-refresh-token
+           Get credentials via an existing refresh token.
+
+       activate-service-account
+           Get credentials via the private key for a service account.
+
+       list
+           List the accounts for known credentials.
+
+       login
+           Get credentials via Google's oauth2 web flow.
+
+       revoke
+           Revoke authorization for credentials.
+

@@ -1,0 +1,13 @@
+NAME
+       gcloud-interactive - Run a Python shell where the gcloud CLI is
+       represented by a collection of callable Python objects. For instance,
+       to run the command "gcloud auth login", call the function
+       "gcloud.auth.login()".
+
+SYNOPSIS
+       gcloud interactive [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

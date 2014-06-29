@@ -1,0 +1,31 @@
+NAME
+       gcloud-compute-firewalls - List, create, and delete Google Compute
+       Engine firewalls
+
+SYNOPSIS
+       gcloud compute firewalls
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create Google Compute Engine firewalls.
+
+       delete
+           Delete Google Compute Engine firewall rules.
+
+       get
+           Get Google Compute Engine firewall rules.
+
+       list
+           List Google Compute Engine firewalls.
+
+       update
+           Update a firewall rule.
+

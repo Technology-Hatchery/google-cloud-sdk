@@ -1,0 +1,31 @@
+NAME
+       gcloud-compute-target-http-proxies - List, create, and delete target
+       HTTP proxies
+
+SYNOPSIS
+       gcloud compute target-http-proxies
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       create
+           Create a target HTTP proxy.
+
+       delete
+           Delete target HTTP proxies.
+
+       get
+           Display detailed information about target HTTP proxies.
+
+       list
+           List target HTTP proxies.
+
+       update
+           Update a target HTTP proxy.
+

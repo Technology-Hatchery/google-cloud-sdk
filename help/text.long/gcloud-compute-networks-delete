@@ -1,0 +1,21 @@
+NAME
+       gcloud-compute-networks-delete - Delete Google Compute Engine networks
+
+SYNOPSIS
+       gcloud compute networks delete
+         NAME [NAME ...]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute networks delete deletes one or more Google Compute
+       Engine networks. Networks can only be deleted when no other resources
+       (e.g., virtual machine instances) refer to them.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

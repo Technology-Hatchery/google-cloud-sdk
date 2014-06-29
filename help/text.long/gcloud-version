@@ -1,0 +1,11 @@
+NAME
+       gcloud-version - Print version information for Cloud SDK components.
+
+SYNOPSIS
+       gcloud version
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

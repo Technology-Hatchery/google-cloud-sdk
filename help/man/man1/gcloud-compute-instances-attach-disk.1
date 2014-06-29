@@ -1,0 +1,67 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-INSTANCES\-ATTACH\-DISK" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-instances-attach-disk \- Attach a disk to an instance
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute instances attach\-disk\fR
+  INSTANCE
+  [\-\-device\-name DEVICE_NAME]
+  \-\-disk DISK
+  [\-\-mode MODE; default="rw"]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute instances attach\-disk\fR is used to attach a disk to an instance\&. For example,
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ compute instances attach\-disk my\-instance \-\-disk my\-disk
+  \-\-zone us\-central1\-a
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+attaches the disk named \(lqmy\-disk\(rq to the instance named \(lqmy\-instance\(rq in zone \(lqus\-central1\-a\(rq\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fIINSTANCE\fR
+.RS 4
+The name of the instance to attach the disk to\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-device\-name\fR \fIDEVICE_NAME\fR
+.RS 4
+An optional name that indicates the disk name the guest operating system will see\&.
+.RE
+.PP
+\fB\-\-disk\fR \fIDISK\fR
+.RS 4
+The name of the disk to attach to the instance\&.
+.RE
+.PP
+\fB\-\-mode\fR \fIMODE\fR
+.RS 4
+Specifies the mode of the disk\&. Supported options are \(lqro\(rq for read\-only and \(lqrw\(rq for read\-write\&. If omitted, \(lqrw\(rq is used as a default\&. It is an error to attach a disk in read\-write mode to more than one instance\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone in which the instance and disk reside\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

@@ -1,0 +1,15 @@
+NAME
+       gcloud-components-remove - Completely uninstall components and
+       components that depend on them.
+
+SYNOPSIS
+       gcloud components remove COMPONENT-IDS [COMPONENT-IDS ...] [-h, --help]
+
+POSITIONAL ARGUMENTS
+       COMPONENT-IDS [COMPONENT-IDS ...]
+           The component ids to remove.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

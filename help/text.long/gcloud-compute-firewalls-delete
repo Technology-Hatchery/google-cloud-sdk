@@ -1,0 +1,21 @@
+NAME
+       gcloud-compute-firewalls-delete - Delete Google Compute Engine firewall
+       rules
+
+SYNOPSIS
+       gcloud compute firewalls delete
+         NAME [NAME ...]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute firewalls delete deletes one or more Google Compute
+       Engine firewall rules.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

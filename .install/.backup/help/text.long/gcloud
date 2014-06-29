@@ -1,0 +1,72 @@
+NAME
+       gcloud - manage Google Cloud Platform resources
+
+SYNOPSIS
+       gcloud GROUP|COMMAND [--project PROJECT] [--quiet, -q]
+       [--user-output-enabled USER_OUTPUT_ENABLED] [--verbosity VERBOSITY]
+       [-h, --help]
+
+DESCRIPTION
+       The gcloud CLI manages authentication and local configuration, as well
+       as your interaction with the Google Cloud Platform APIs.
+
+FLAGS
+       --project PROJECT
+           Google Cloud Platform project to use for this invocation.
+
+       --quiet
+           Disable all interactive prompts when running gcloud commands. If
+           input is required, defaults will be used, or an error will be
+           raised.
+
+       --user-output-enabled USER_OUTPUT_ENABLED
+           Control whether user intended output is printed to the console.
+           (true/false)
+
+       --verbosity VERBOSITY
+           Override the default verbosity for this command. This must be a
+           standard logging verbosity level: [debug, info, warning, error,
+           critical, none] (Default: [warning]).
+
+       --help
+           Print a summary help and exit.
+
+GROUPS
+       GROUP is one of the following.
+
+       auth
+           Manage oauth2 credentials for the Google Cloud SDK.
+
+       components
+           Install, update, or remove the tools in the Google Cloud SDK.
+
+       compute
+           Read and manipulate Google Compute Engine resources.
+
+       config
+           View and edit Google Cloud SDK properties.
+
+       dns
+           Manage Cloud DNS.
+
+       preview
+           Manage Preview CLI command groups.
+
+       sql
+           Manage Cloud SQL databases.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       help
+           Print a detailed help message.
+
+       init
+           Initialize a gcloud workspace in the current directory.
+
+       interactive
+           Use this tool in an interactive python shell.
+
+       version
+           Print version information for Cloud SDK components.
+

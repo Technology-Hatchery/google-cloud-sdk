@@ -1,0 +1,36 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-INSTANCES\-DELETE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-instances-delete \- Delete Google Compute Engine virtual machine instances
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute instances delete\fR
+  NAME [NAME \&...]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute instances delete\fR deletes one or more Google Compute Engine virtual machine instances\&.
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME [NAME \&...]\fR
+.RS 4
+The resources to delete\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone of the resources to delete\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

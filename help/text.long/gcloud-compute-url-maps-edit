@@ -1,0 +1,29 @@
+NAME
+       gcloud-compute-url-maps-edit - Modify URL maps
+
+SYNOPSIS
+       gcloud compute url-maps edit
+         NAME
+         [--format FORMAT; default="yaml"]
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute url-maps edit can be used to modify a URL map. The URL
+       map resource is fetched from the server and presented in a text editor.
+       After the file is saved and closed, this command will update the
+       resource. Only fields that can be modified are displayed in the editor.
+
+       The editor used to modify the resource is chosen by inspecting the
+       "EDITOR" environment variable.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the URL map to modify.
+
+FLAGS
+       --format FORMAT
+           The format to edit the resource in. Choices are "json" and "yaml".
+
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,148 @@
+'\" t
+.TH "GCLOUD\-COMPUTE\-DISKS\-CREATE" "1"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.nh
+.ad l
+.SH "NAME"
+gcloud-compute-disks-create \- Create Google Compute Engine persistent disks
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBgcloud compute disks create\fR
+  NAME [NAME \&...]
+  [\-\-description DESCRIPTION]
+  [\-\-size SIZE]
+  [\-\-source\-image SOURCE_IMAGE | \-\-source\-snapshot SOURCE_SNAPSHOT]
+  \-\-zone ZONE
+  [\-h, \-\-help]
+.fi
+.SH "DESCRIPTION"
+.sp
+\fBgcloud compute disks create\fR creates one or more Google Compute Engine persistent disks\&. When creating virtual machine instances, disks can be attached to the instances through the \fIgcloud compute instances create\fR command\&. Disks can also be attached to instances that are already running using \fIgloud compute instances attach\-disk\fR\&.
+.sp
+Disks are zonal resources, so they reside in a particular zone for their entire lifetime\&. The contents of a disk can be moved to a different zone by snapshotting the disk (using \fIgcloud compute disks snapshot\fR) and creating a new disk using \(lq\-\-source\-snapshot\(rq in the desired zone\&.
+.sp
+When creating disks, be sure to include the \(lq\-\-zone\(rq option:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ gcloud compute disks create my\-disk\-1 my\-disk\-2 \-\-zone us\-east1\-a
+.fi
+.if n \{\
+.RE
+.\}
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fINAME [NAME \&...]\fR
+.RS 4
+The names of the disks to create\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-description\fR \fIDESCRIPTION\fR
+.RS 4
+An optional, textual description for the disks being created\&.
+.RE
+.PP
+\fB\-\-size\fR \fISIZE\fR
+.RS 4
+Indicates the size of the disks\&. The value must be a whole number followed by a size unit of \(lqKB\(rq for kilobyte, \(lqMB\(rq for megabyte, \(lqGB\(rq for gigabyte, or \(lqTB\(rq for terabyte\&. For example, \(lq10GB\(rq will produce 10 gigabyte disks\&. If omitted, a default size of 200 GB is used\&. The minimum size a disk can have is 1 GB\&. Disk size must be a multiple of 1 GB\&.
+.RE
+.PP
+\fB\-\-source\-image\fR \fISOURCE_IMAGE\fR
+.RS 4
+A source image to apply to the disks being created\&.
+.sp
+The value for this option can be the name of an image in the current project, a URI when referring to an image in another project, or an alias from the table below\&.
+.TS
+tab(:);
+ltB ltB ltB ltB.
+T{
+Alias
+T}:T{
+Project
+T}:T{
+Image Name
+T}:T{
+\ \&
+T}
+.T&
+lt lt lt l
+lt lt lt l
+lt lt lt l
+lt lt lt l
+lt lt lt l.
+T{
+centos\-6
+T}:T{
+centos\-cloud
+T}:T{
+centos\-6\-v20140415
+T}:T{
+\ \&
+T}
+T{
+debian\-7
+T}:T{
+debian\-cloud
+T}:T{
+debian\-7\-wheezy\-v20140415
+T}:T{
+\ \&
+T}
+T{
+debian\-7\-backports
+T}:T{
+debian\-cloud
+T}:T{
+backports\-debian\-7\-wheezy\-v20140415
+T}:T{
+\ \&
+T}
+T{
+rhel\-6
+T}:T{
+rhel\-cloud
+T}:T{
+rhel\-6\-v20140415
+T}:T{
+\ \&
+T}
+T{
+sles\-11
+T}:T{
+suse\-cloud
+T}:T{
+sles\-11\-sp3\-v20140306
+T}:T{
+\ \&
+T}
+.TE
+.sp 1
+As new images are released, these aliases will be updated\&. If using this tool in a script where depending on a specific version of an image is necessary, then do not use the aliases\&. Instead, use the URI of the desired image\&.
+.sp
+Aliases are expanded first, so avoid creating images in your project whose names are in the set of aliases\&. If you do create an image whose name matches an alias, you can refer to it by using its URI\&.
+.sp
+This flag is mutually exclusive with \(lq\-\-source\-snapshot\(rq\&.
+.RE
+.PP
+\fB\-\-source\-snapshot\fR \fISOURCE_SNAPSHOT\fR
+.RS 4
+A source snapshot used to create the disks\&. It is safe to delete a snapshot after a disk has been created from the snapshot\&. In such cases, the disks will no longer reference the deleted snapshot\&. To get a list of snapshots in your current project, run
+\fIgcloud compute snapshots list\fR\&. A snapshot from an existing disk can be created using the
+\fIgcloud compute disks snapshot\fR
+command\&. This flag is mutually exclusive with \(lq\-\-source\-image\(rq\&.
+.RE
+.PP
+\fB\-\-zone\fR \fIZONE\fR
+.RS 4
+The zone to create the disks in\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

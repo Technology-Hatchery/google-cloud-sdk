@@ -1,0 +1,13 @@
+NAME
+       gcloud-auth-list - List the accounts for known credentials.
+
+SYNOPSIS
+       gcloud auth list [--account ACCOUNT] [-h, --help]
+
+FLAGS
+       --account ACCOUNT
+           List only credentials for one account.
+
+       --help
+           Print a summary help and exit.
+

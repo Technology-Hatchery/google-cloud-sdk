@@ -1,0 +1,34 @@
+NAME
+       gcloud-compute-target-pools-add-health-checks - Add an HTTP health
+       check to a target pool
+
+SYNOPSIS
+       gcloud compute target-pools add-health-checks
+         NAME
+         --http-health-check HEALTH_CHECK
+         --region REGION
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-pools add-health-checks is used to add an HTTP
+       health check to a target pool. Health checks are used to determine the
+       health status of instances in the target pool. Only one health check
+       can be attached to a target pool, so this command will fail if there as
+       already a health check attached to the target pool. For more
+       information on health checks and load balancing, see
+       https://developers.google.com/compute/docs/load-balancing/.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the target pool to which to add the health check.
+
+FLAGS
+       --http-health-check HEALTH_CHECK
+           Specifies an HTTP health check object to add to the target pool.
+
+       --region REGION
+           The region of the target pool.
+
+       --help
+           Print a summary help and exit.
+

@@ -1,0 +1,61 @@
+'\" t
+.\"     Title: gcloud-config-set
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 04/30/2014
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "GCLOUD\-CONFIG\-SET" "1" "04/30/2014" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+gcloud-config-set \- Set the value for an option, so that Cloud SDK tools can use them as configuration\&.
+.SH "SYNOPSIS"
+.sp
+\fBgcloud config set\fR PROPERTY VALUE [\-\-global\-only] [\-\-section SECTION, \-s SECTION; default="core"] [\-h, \-\-help]
+.SH "POSITIONAL ARGUMENTS"
+.PP
+\fIPROPERTY\fR
+.RS 4
+The property to be set\&.
+.RE
+.PP
+\fIVALUE\fR
+.RS 4
+The value to be set\&.
+.RE
+.SH "FLAGS"
+.PP
+\fB\-\-global\-only\fR
+.RS 4
+Set the option in the global properties file\&.
+.RE
+.PP
+\fB\-\-section\fR \fISECTION\fR
+.RS 4
+The section containing the option to be set\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Print a summary help and exit\&.
+.RE

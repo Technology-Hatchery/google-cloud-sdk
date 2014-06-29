@@ -1,0 +1,15 @@
+NAME
+       gcloud-auth-print-access-token - ==SUPPRESS==
+
+SYNOPSIS
+       gcloud auth print-access-token [ACCOUNT] [-h, --help]
+
+POSITIONAL ARGUMENTS
+       [ACCOUNT]
+           The account to get the access token for. Leave empty for the active
+           account.
+
+FLAGS
+       --help
+           Print a summary help and exit.
+

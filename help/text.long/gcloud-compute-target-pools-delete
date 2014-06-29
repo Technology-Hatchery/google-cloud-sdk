@@ -1,0 +1,24 @@
+NAME
+       gcloud-compute-target-pools-delete - Delete target pools
+
+SYNOPSIS
+       gcloud compute target-pools delete
+         NAME [NAME ...]
+         --region REGION
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-pools delete deletes one or more Google Compute
+       Engine target pools.
+
+POSITIONAL ARGUMENTS
+       NAME [NAME ...]
+           The resources to delete.
+
+FLAGS
+       --region REGION
+           The region of the resources to delete.
+
+       --help
+           Print a summary help and exit.
+

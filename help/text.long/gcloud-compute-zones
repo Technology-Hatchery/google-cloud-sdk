@@ -1,0 +1,21 @@
+NAME
+       gcloud-compute-zones - List Google Compute Engine zones
+
+SYNOPSIS
+       gcloud compute zones
+         COMMAND
+         [-h, --help]
+
+FLAGS
+       --help
+           Print a summary help and exit.
+
+COMMANDS
+       COMMAND is one of the following.
+
+       get
+           Get Google Compute Engine zones.
+
+       list
+           List Google Compute Engine zones.
+

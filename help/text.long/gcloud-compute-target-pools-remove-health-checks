@@ -1,0 +1,33 @@
+NAME
+       gcloud-compute-target-pools-remove-health-checks - Remove an HTTP
+       health check from a target pool
+
+SYNOPSIS
+       gcloud compute target-pools remove-health-checks
+         NAME
+         --http-health-check HEALTH_CHECK
+         --region REGION
+         [-h, --help]
+
+DESCRIPTION
+       gcloud compute target-pools remove-health-checks is used to remove an
+       HTTP health check from a target pool. Health checks are used to
+       determine the health status of instances in the target pool. For more
+       information on health checks and load balancing, see
+       https://developers.google.com/compute/docs/load-balancing/.
+
+POSITIONAL ARGUMENTS
+       NAME
+           The name of the target pool from which to remove the health check.
+
+FLAGS
+       --http-health-check HEALTH_CHECK
+           Specifies an HTTP health check object to remove from the target
+           pool.
+
+       --region REGION
+           The region of the target pool.
+
+       --help
+           Print a summary help and exit.
+

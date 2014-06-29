@@ -1,0 +1,21 @@
+NAME
+       gcloud-config-list - List all currently available Cloud SDK properties
+       associated with your current workspace or global configuration.
+
+SYNOPSIS
+       gcloud config list
+         [PROPERTY]
+         [--all]
+         [-h, --help]
+
+POSITIONAL ARGUMENTS
+       [PROPERTY]
+           The property to be listed.
+
+FLAGS
+       --all
+           List all set and unset properties that match the arguments.
+
+       --help
+           Print a summary help and exit.
+
