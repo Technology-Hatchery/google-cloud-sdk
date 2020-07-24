@@ -2490,13 +2490,13 @@ class GoogleComputeListCommand(GoogleComputeCommand):
                              region=region))
     return results
 
-  def _GetDesiredColumnsAndSpecs(self, default_print_spec, master_print_spec):
+  def _GetDesiredColumnsAndSpecs(self, default_print_spec, main_print_spec):
     """Get the print specs for this operation given the specified flags.
 
     Args:
       default_print_spec: The default print spec to use, if the flag is
         unspecified.
-      master_print_spec: A list of all possible columns and associated fields.
+      main_print_spec: A list of all possible columns and associated fields.
 
     Returns:
       A tuple (column_names, print_specs), corresponding to column names and
@@ -2506,22 +2506,22 @@ class GoogleComputeListCommand(GoogleComputeCommand):
       UsageError: Invalid field given.
     """
     if self._flags.columns and 'all' in self._flags.columns:
-      column_names = [x[0] for x in master_print_spec]
+      column_names = [x[0] for x in main_print_spec]
     elif self._flags.columns:
       column_names = self._flags.columns
     else:
       column_names = [x for x in default_print_spec]
 
-    # Pull the desired print specs out of the master list.
+    # Pull the desired print specs out of the main list.
     desired_specs = []
     for col in column_names:
-      specs = [spec for spec in master_print_spec if spec[0] == col]
+      specs = [spec for spec in main_print_spec if spec[0] == col]
       if specs:
         desired_specs.extend(specs)
       else:
         raise app.UsageError(
             'Invalid field: %s. Valid columns are <%s>.' %
-            (col, '|'.join(spec[0] for spec in master_print_spec)))
+            (col, '|'.join(spec[0] for spec in main_print_spec)))
 
     return column_names, desired_specs
 

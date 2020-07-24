@@ -86,7 +86,7 @@ class OperationCommand(command_base.GoogleComputeCommand):
       # operation_name is really ambiguous. Get the base name.
       operation = operation_name.split('/')[-1]
 
-      # Search for the item in the master list of all items.
+      # Search for the item in the main list of all items.
       filter_expression = ('name eq %s' % operation)
 
       aggregated_items = utils.AllAggregated(
