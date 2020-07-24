@@ -86,7 +86,7 @@ class TestRDSConnection(AWSMockServiceTestCase):
                   <InstanceCreateTime>2012-10-03T22:01:51.047Z</InstanceCreateTime>
                   <AllocatedStorage>200</AllocatedStorage>
                   <DBInstanceClass>db.m1.large</DBInstanceClass>
-                  <MasterUsername>awsuser</MasterUsername>
+                  <MainUsername>awsuser</MainUsername>
                   <StatusInfos>
                     <DBInstanceStatusInfo>
                       <Message></Message>
@@ -148,7 +148,7 @@ class TestRDSConnection(AWSMockServiceTestCase):
             db.endpoint,
             (u'mydbinstance2.c0hjqouvn9mf.us-west-2.rds.amazonaws.com', 3306))
         self.assertEqual(db.instance_class, 'db.m1.large')
-        self.assertEqual(db.master_username, 'awsuser')
+        self.assertEqual(db.main_username, 'awsuser')
         self.assertEqual(db.availability_zone, 'us-west-2b')
         self.assertEqual(db.backup_retention_period, 1)
         self.assertEqual(db.preferred_backup_window, '10:30-11:00')
@@ -196,7 +196,7 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
                     <ReadReplicaDBInstanceIdentifiers/>
                     <Engine>mysql</Engine>
                     <PendingModifiedValues>
-                        <MasterUserPassword>****</MasterUserPassword>
+                        <MainUserPassword>****</MainUserPassword>
                     </PendingModifiedValues>
                     <BackupRetentionPeriod>0</BackupRetentionPeriod>
                     <MultiAZ>false</MultiAZ>
@@ -250,7 +250,7 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
                     <PreferredMaintenanceWindow>sat:07:30-sat:08:00</PreferredMaintenanceWindow>
                         <AllocatedStorage>10</AllocatedStorage>
                         <DBInstanceClass>db.m1.large</DBInstanceClass>
-                        <MasterUsername>master</MasterUsername>
+                        <MainUsername>main</MainUsername>
                 </DBInstance>
             </CreateDBInstanceResult>
             <ResponseMetadata>
@@ -265,7 +265,7 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
             'SimCoProd01',
             10,
             'db.m1.large',
-            'master',
+            'main',
             'Password01',
             param_group='default.mysql5.1',
             db_subnet_group_name='dbSubnetgroup01',
@@ -281,8 +281,8 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
             'DBParameterGroupName': 'default.mysql5.1',
             'DBSubnetGroupName': 'dbSubnetgroup01',
             'Engine': 'MySQL5.1',
-            'MasterUsername': 'master',
-            'MasterUserPassword': 'Password01',
+            'MainUsername': 'main',
+            'MainUserPassword': 'Password01',
             'Port': 3306
         }, ignore_params_values=['Version'])
 
@@ -291,10 +291,10 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
         self.assertEqual(db.status, 'creating')
         self.assertEqual(db.allocated_storage, 10)
         self.assertEqual(db.instance_class, 'db.m1.large')
-        self.assertEqual(db.master_username, 'master')
+        self.assertEqual(db.main_username, 'main')
         self.assertEqual(db.multi_az, False)
         self.assertEqual(db.pending_modified_values,
-            {'MasterUserPassword': '****'})
+            {'MainUserPassword': '****'})
 
         self.assertEqual(db.parameter_group.name,
                          'default.mysql5.1')
@@ -310,7 +310,7 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
             'SimCoProd01',
             10,
             'db.m1.large',
-            'master',
+            'main',
             'Password01',
             param_group=param_group,
             db_subnet_group_name='dbSubnetgroup01')
@@ -324,8 +324,8 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
             'DBParameterGroupName': 'default.mysql5.1',
             'DBSubnetGroupName': 'dbSubnetgroup01',
             'Engine': 'MySQL5.1',
-            'MasterUsername': 'master',
-            'MasterUserPassword': 'Password01',
+            'MainUsername': 'main',
+            'MainUserPassword': 'Password01',
             'Port': 3306,
         }, ignore_params_values=['Version'])
 
@@ -334,10 +334,10 @@ class TestRDSCCreateDBInstance(AWSMockServiceTestCase):
         self.assertEqual(db.status, 'creating')
         self.assertEqual(db.allocated_storage, 10)
         self.assertEqual(db.instance_class, 'db.m1.large')
-        self.assertEqual(db.master_username, 'master')
+        self.assertEqual(db.main_username, 'main')
         self.assertEqual(db.multi_az, False)
         self.assertEqual(db.pending_modified_values,
-            {'MasterUserPassword': '****'})
+            {'MainUserPassword': '****'})
         self.assertEqual(db.parameter_group.name,
                          'default.mysql5.1')
         self.assertEqual(db.parameter_group.description, None)
@@ -381,7 +381,7 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
               <PreferredMaintenanceWindow>sat:07:30-sat:08:00</PreferredMaintenanceWindow>
               <AllocatedStorage>10</AllocatedStorage>
               <DBInstanceClass>db.m1.large</DBInstanceClass>
-              <MasterUsername>master</MasterUsername>
+              <MainUsername>main</MainUsername>
             </DBInstance>
           </RestoreDBInstanceToPointInTimeResult>
           <ResponseMetadata>
@@ -409,7 +409,7 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
         self.assertEqual(db.status, 'creating')
         self.assertEqual(db.allocated_storage, 10)
         self.assertEqual(db.instance_class, 'db.m1.large')
-        self.assertEqual(db.master_username, 'master')
+        self.assertEqual(db.main_username, 'main')
         self.assertEqual(db.multi_az, False)
 
         self.assertEqual(db.parameter_group.name,
@@ -443,7 +443,7 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
             'SimCoProd01',
             10,
             'db.m1.large',
-            'master',
+            'main',
             'Password01',
             param_group='default.mysql5.1',
             db_subnet_group_name='dbSubnetgroup01',
@@ -458,8 +458,8 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
             'DBParameterGroupName': 'default.mysql5.1',
             'DBSubnetGroupName': 'dbSubnetgroup01',
             'Engine': 'MySQL5.1',
-            'MasterUsername': 'master',
-            'MasterUserPassword': 'Password01',
+            'MainUsername': 'main',
+            'MainUserPassword': 'Password01',
             'Port': 3306,
             'VpcSecurityGroupIds.member.1': 'sg-1',
             'VpcSecurityGroupIds.member.2': 'sg-2'
@@ -479,7 +479,7 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
             'SimCoProd01',
             10,
             'db.m1.large',
-            'master',
+            'main',
             'Password01',
             param_group='default.mysql5.1',
             db_subnet_group_name='dbSubnetgroup01',
@@ -494,8 +494,8 @@ class TestRDSConnectionRestoreDBInstanceFromPointInTime(AWSMockServiceTestCase):
             'DBParameterGroupName': 'default.mysql5.1',
             'DBSubnetGroupName': 'dbSubnetgroup01',
             'Engine': 'MySQL5.1',
-            'MasterUsername': 'master',
-            'MasterUserPassword': 'Password01',
+            'MainUsername': 'main',
+            'MainUserPassword': 'Password01',
             'Port': 3306,
             'VpcSecurityGroupIds.member.1': 'sg-1',
             'VpcSecurityGroupIds.member.2': 'sg-2'

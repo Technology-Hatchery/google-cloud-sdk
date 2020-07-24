@@ -136,7 +136,7 @@ You attempted to watch a bucket with an application URL of:
 
 which is not authorized for your project. Notification endpoint URLs must be
 whitelisted in your Cloud Console project. To do that, the domain must also be
-verified using Google Webmaster Tools. For instructions, please see:
+verified using Google Webmain Tools. For instructions, please see:
 
   https://developers.google.com/storage/docs/object-change-notification#_Authorization
 """
